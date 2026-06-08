@@ -324,16 +324,16 @@ class PriceAdminApp:
         actions = ttk.Frame(root_frame, style="Section.TFrame", padding=(24, 16, 24, 10))
         actions.pack(fill="x")
 
-        self.reload_button = ttk.Button(actions, text="Recargar desde Firebase", style="Primary.TButton", command=self.load_prices)
+        self.reload_button = ttk.Button(actions, text="Obtener precios actuales", style="Primary.TButton", command=self.load_prices)
         self.reload_button.pack(side="left")
 
-        self.save_button = ttk.Button(actions, text="Guardar en Firebase", style="Primary.TButton", command=self.save_prices_to_firebase)
+        self.save_button = ttk.Button(actions, text="Actualizar web", style="Primary.TButton", command=self.save_prices_to_firebase)
         self.save_button.pack(side="left", padx=(12, 0))
 
-        self.export_button = ttk.Button(actions, text="Exportar copia local", style="Secondary.TButton", command=self.export_backup)
+        self.export_button = ttk.Button(actions, text="Guardar copia local", style="Secondary.TButton", command=self.export_backup)
         self.export_button.pack(side="left", padx=(12, 0))
 
-        self.revert_button = ttk.Button(actions, text="Revertir cambios", style="Secondary.TButton", command=self.revert_loaded_values)
+        self.revert_button = ttk.Button(actions, text="Descartar cambios", style="Secondary.TButton", command=self.revert_loaded_values)
         self.revert_button.pack(side="left", padx=(12, 0))
 
         ttk.Label(actions, text="Los cambios se guardan directamente en /precios.json.", style="Small.TLabel").pack(side="right")
